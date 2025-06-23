@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+</head>
+<body>
+    <h2>Personal Information Form</h2>
+    
+    <form>
+        <p>
+            <b>Name:</b><br>
+            <input type="text" name="name" size="30">
+        </p>
+        
+        <p>
+            <b>Address:</b><br>
+            <input type="text" name="address" size="30">
+        </p>
+        
+        <p>
+            <b>Email:</b><br>
+            <input type="email" name="email" size="30">
+        </p>
+        
+        <p>
+            <b>Gender:</b><br>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female
+        </p>
+        
+        <p>
+            <b>Hobbies:</b><br>
+            <input type="checkbox" name="hobby" value="sports"> Sports<br>
+            <input type="checkbox" name="hobby" value="movies"> Movies<br>
+            <input type="checkbox" name="hobby" value="travel"> Travelling
+        </p>
+        
+        <p>
+            <b>Country:</b><br>
+            <select name="country">
+                <option value="nepal">Nepal</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+            </select>
+        </p>
+        
+        <p>
+            <b>Message:</b><br>
+            <textarea name="message" rows="5" cols="30"></textarea>
+        </p>
+        
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </p>
+    </form>
+</body>
+</html>
