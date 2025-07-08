@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            border: 5px solid #dedc87;
+        }
+
+        .box {
+            position: absolute;
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .header1,
+        .header2,
+        .header3 {
+            top: 0;
+            height: 40px;
+            font-weight: bold;
+            text-align: center;
+            background: #eee;
+        }
+
+        .header1 {
+            left: 0;
+            width: 50%;
+        }
+
+        .header2 {
+            left: 50%;
+            width: 25%;
+        }
+
+        .header3 {
+            left: 75%;
+            width: 25%;
+        }
+
+        .col1 {
+            top: 40px;
+            left: 0;
+            width: 50%;
+            height: 260px;
+            background: lightblue;
+        }
+
+        .b {
+            top: 40px;
+            left: 50%;
+            width: 25%;
+            height: 40px;
+            background: yellow;
+            text-align: center;
+        }
+
+        .c {
+            top: 40px;
+            left: 75%;
+            width: 25%;
+            height: 40px;
+            background: red;
+            text-align: center;
+        }
+
+        .col23 {
+            top: 80px;
+            left: 50%;
+            width: 50%;
+            height: 220px;
+            background: darkgreen;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box header1">Column 1</div>
+        <div class="box header2">Column 2</div>
+        <div class="box header3">Column 3</div>
+
+        <div class="box col1">
+            A numbered list
+            <ol>
+                <li>Able</li>
+                <li>Baker</li>
+                <li>Charlie</li>
+                <li>Delta</li>
+                <li>Echo</li>
+            </ol>
+        </div>
+
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+
+        <div class="box col23">
+            An unnumbered list:
+            <ul>
+                <li>Pounds</li>
+                <li>Dollars</li>
+                <li>Euro</li>
+                <li>Yen</li>
+                <li>Roubles</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

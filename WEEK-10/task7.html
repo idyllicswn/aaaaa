@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table with Alternate Row Colors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: skyblue;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .image-cell img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image Gallery Table</h1>
+
+    <div id="table-container">
+        
+    </div>
+
+    <script>
+       
+        const tableData = [
+            { sn: 1, name: "Name 1", image: "1.jpg" },
+            { sn: 2, name: "Name 2", image: "2.jpg" },
+            { sn: 3, name: "Name 3", image: "3.jpg" },
+            { sn: 4, name: "Name 4", image: "4.jpg" }
+        ];
+
+        
+        const container = document.getElementById('table-container');
+
+        
+        const table = document.createElement('table');
+
+        
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+
+        ['S.N.', 'Name', 'Image'].forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            headerRow.appendChild(th);
+        });
+
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        
+        const tbody = document.createElement('tbody');
+
+        tableData.forEach(item => {
+            const row = document.createElement('tr');
+
+           
+            const snCell = document.createElement('td');
+            snCell.textContent = item.sn;
+            row.appendChild(snCell);
+
+            const nameCell = document.createElement('td');
+            nameCell.textContent = item.name;
+            row.appendChild(nameCell);
+
+           
+            const imgCell = document.createElement('td');
+            imgCell.className = 'image-cell';
+            const img = document.createElement('img');
+            img.src = item.image;
+            img.alt = item.name;
+            img.onerror = function () {
+                this.src = 'placeholder.jpg';
+            };
+            imgCell.appendChild(img);
+            row.appendChild(imgCell);
+
+            tbody.appendChild(row);
+        });
+
+        table.appendChild(tbody);
+        container.appendChild(table);
+    </script>
+</body>
+
+</html>

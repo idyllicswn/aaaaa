@@ -1,0 +1,94 @@
+/* Main Styles */
+body {
+    font-family: Verdana, sans-serif;
+    color: #330000;
+    background-color: #00BFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for centered content */
+.container {
+    width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Styles */
+header {
+    background-color: #ccaa66;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Two-column Layout */
+.columns {
+    display: flex;
+    min-height: 400px;
+}
+
+/* Navigation Column */
+nav {
+    width: 25%;
+    background-color: #E8D882;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #330000;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #f1e8b0;
+}
+
+/* Main Content Column */
+main {
+    width: 75%;
+    background-color: #f1e8b0;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Pirate Image Placement */
+.pirate-image {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.pirate-image img {
+    width: 150px;
+    height: auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ccaa66;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    clear: both;
+}

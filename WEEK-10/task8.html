@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array Join Operations</title>
+</head>
+
+<body>
+    <h1>Array Join Examples</h1>
+
+    <script>
+        
+        const myColor = ["Red", "Green", "White", "Black"];
+
+     
+        const result1 = myColor.toString();
+        document.write(`<p>Using toString(): "${result1}"</p>`);
+
+      
+        const result2 = myColor.join();
+        document.write(`<p>Using join(): "${result2}"</p>`);
+
+        
+        const result3 = myColor.join('+');
+        document.write(`<p>Using join('+'): "${result3}"</p>`);
+
+       
+        console.log("toString():", result1);
+        console.log("join():", result2);
+        console.log("join('+'):", result3);
+    </script>
+</body>
+
+</html>

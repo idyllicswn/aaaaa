@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array Sum and Product Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .result {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Array Sum and Product Calculator</h1>
+
+    <div id="output">
+       
+    </div>
+
+    <script>
+        
+        const numbers = [1, 2, 3, 4, 5];
+
+        
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+     
+        let product = 1; // Initialize with 1 (not 0)
+        for (let i = 0; i < numbers.length; i++) {
+            product *= numbers[i];
+        }
+
+      
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = `
+            <div class="result">
+                <h3>Array: [${numbers.join(', ')}]</h3>
+                <p>Sum of array elements: ${sum}</p>
+                <p>Product of array elements: ${product}</p>
+            </div>
+        `;
+
+        
+        const sumAlt = numbers.reduce((acc, num) => acc + num, 0);
+        const productAlt = numbers.reduce((acc, num) => acc * num, 1);
+
+        outputDiv.innerHTML += `
+            <div class="result">
+                <h3>Alternative Calculation (using array methods)</h3>
+                <p>Sum using reduce(): ${sumAlt}</p>
+                <p>Product using reduce(): ${productAlt}</p>
+            </div>
+        `;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiplication Table of 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .multiplication-table {
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Multiplication Table of 5</h1>
+
+    <div id="table" class="multiplication-table">
+      
+    </div>
+
+    <script>
+       
+        const tableDiv = document.getElementById('table');
+
+        
+        for (let i = 1; i <= 10; i++) {
+           
+            const p = document.createElement('p');
+            p.textContent = `5 * ${i} = ${5 * i}`;
+
+            
+            tableDiv.appendChild(p);
+        }
+
+       
+        document.write("<h2>Alternative Display:</h2>");
+        for (let i = 1; i <= 10; i++) {
+            document.write(`<p>5 * ${i} = ${5 * i}</p>`);
+        }
+    </script>
+</body>
+
+</html>

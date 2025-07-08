@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day Finder</title>
+</head>
+
+<body>
+    <h1>Day Finder Using Switch Case</h1>
+
+    <script>
+
+        var dayNumber = parseInt(prompt("Enter a number (1-7) to get the day:", ""));
+
+        var dayName;
+
+        switch (dayNumber) {
+            case 1:
+                dayName = "Sunday";
+                break;
+            case 2:
+                dayName = "Monday";
+                break;
+            case 3:
+                dayName = "Tuesday";
+                break;
+            case 4:
+                dayName = "Wednesday";
+                break;
+            case 5:
+                dayName = "Thursday";
+                break;
+            case 6:
+                dayName = "Friday";
+                break;
+            case 7:
+                dayName = "Saturday";
+                break;
+            default:
+                dayName = "Invalid - Please enter a number between 1 and 7";
+        }
+
+
+        alert("Day " + dayNumber + " is: " + dayName);
+
+        document.write("<h2>Result:</h2>");
+        document.write("<p>You entered: " + dayNumber + "</p>");
+        document.write("<p>Day: " + dayName + "</p>");
+    </script>
+</body>
+
+</html>

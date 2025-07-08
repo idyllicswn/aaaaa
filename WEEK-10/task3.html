@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grading System</title>
+</head>
+<body>
+    <h1>Student Result Calculator</h1>
+    
+    <script>
+      
+        var marks = parseFloat(prompt("Enter your marks (0-100):", ""));
+        
+
+        if (isNaN(marks) || marks < 0 || marks > 100) {
+            alert("Please enter valid marks between 0 and 100");
+        } else {
+          
+            var result;
+            
+            if (marks >= 80 && marks <= 100) {
+                result = "Distinction";
+            } else if (marks >= 60 && marks < 80) {
+                result = "First Division";
+            } else if (marks >= 50 && marks < 60) {
+                result = "Second Division";
+            } else if (marks >= 40 && marks < 50) {
+                result = "Third Division";
+            } else {
+                result = "Fail";
+            }
+            
+            alert("Your Result: " + result);
+           
+            document.write("<h2>Result Details:</h2>");
+            document.write("<p>Marks Obtained: " + marks + "</p>");
+            document.write("<p>Result: " + result + "</p>");
+        }
+    </script>
+</body>
+</html>
